@@ -1,0 +1,23 @@
+h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    font-weight: 600;
+}
+
+body{
+    margin:20px 30px;
+}
+form{
+    margin: 40px 30px;
+    text-align: center;
+    justify-content: center;
+}
+button{
+    margin-top: 50px;
+}
+
+
+
+
+
