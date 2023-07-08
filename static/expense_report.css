@@ -1,7 +1,7 @@
 h1{
     text-align: center;
-    margin-top: 50px;
     margin-bottom: 20px;
+    font-weight: 600;
 
 }
 h2{
@@ -10,11 +10,16 @@ h2{
     margin-top: 30px;
 }
 body{
-    margin:30px 40px
+    margin-left: 20px;
+    margin-right: 20px;
 }
 p{
     text-align: center;
     justify-content: center;
     font-weight: 500;
 
+}
+table{
+    text-align: center;
+    justify-content: center;
 }

@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracking system</title>
+    
+</head>
+<body>
+    
+    <header>
+        <img 
+         style="height:100px;width:200px;margin-left: 10px;margin-top: 10px;"
+        src="{% static 'images/logo-expense-tracker.jpg' %}" alt=" Image here">
+    </header>
+    {% block content %}
+
+    {% endblock %}
+    
+</body>
+</html>

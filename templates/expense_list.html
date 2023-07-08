@@ -1,4 +1,6 @@
 {% load static %}
+{% include 'header.html' %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +11,17 @@
 </head>
 <body>
     <h1><b>Expense List</b></h1>
+
+    <form action="{% url 'clear_expenses' %}" method="POST">
+        {% csrf_token %}
+        <button class="btn btn-danger" type="submit">Clear</button>
+    </form>
+    
+   
+
+
+
+
     <table class="table table-striped">
         <thead>
             <tr>

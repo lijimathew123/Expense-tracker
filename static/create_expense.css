@@ -1,23 +1,32 @@
 h1{
     text-align: center;
-    margin-top: 50px;
     margin-bottom: 70px;
     font-weight: 600;
 }
 
 body{
-    margin:20px 30px;
+    margin-left:20px;
+    margin-right: 20px;
+
 }
-form{
-    margin: 40px 30px;
-    text-align: center;
-    justify-content: center;
-}
+
 button{
     margin-top: 50px;
 }
 
+.budget_limit{
+    justify-content: center;
+    margin:30px 20px;
+    text-align: center;
+}
+.budget_limit form table{
+    margin-bottom: 20px;
+}
 
-
+.create{
+    justify-content: center;
+    text-align: center;
+    
+}
 
 

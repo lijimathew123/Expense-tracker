@@ -1,4 +1,5 @@
 {% load static %}
+{% include 'header.html' %}
 
 <!DOCTYPE html>
 <html>
@@ -30,7 +31,7 @@
         <tbody>
             {% for category_total in category_totals %}
             <tr>
-                <td>{{ category_total.category }}</td>
+                <td>{{ category_total.category__name  }}</td>
                 <td>{{ category_total.total_amount }}</td>
             </tr>
             {% endfor %}
@@ -42,6 +43,46 @@
     {% if total_expenses > 50000 %}
     <p class="red-text">You crossed your monthly limit</p>
     {% endif %}
+
+    
+    <h2 style="text-align: left;">Budget Limits</h2>
+   
+    <div style="text-align: center;">
+        <table style="text-align: center;">
+            <thead>
+                <th>Name</th>
+                <th>Budget limit</th>
+            </thead>
+            <tbody>
+                {% for category in categories %}
+                <tr>
+                    <td>{{ category.name }}</td>
+                    <td>{{ category.budget_limit }}</td>
+                </tr>
+               
+                
+            {% endfor %}
+            </tbody>
+        
+    </table>
+    </div>
+   
+    {% if chart_image %}
+    <h2 style="text-align:left;">Monthly Expense Chart</h2>
+    <img src="data:image/png;base64,{{ chart_image }}" alt="Expense Chart">
+    {% endif %}
+
+    {% if budget_notifications %}
+    <div class="budget-notifications">
+        <h3>Budget Notifications:</h3>
+        <ul>
+            {% for category in budget_notifications %}
+                <li style="color: red;">{{ category.name }}: Expenses exceeded budget limit!</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
